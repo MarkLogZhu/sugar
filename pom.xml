@@ -28,6 +28,7 @@
         <java.version>1.8</java.version>
         <sugar.version>0.0.1-SNAPSHOT</sugar.version>
         <beetl.version>2.9.3</beetl.version>
+        <fastjson.version>1.2.58</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -56,6 +57,14 @@
                 <artifactId>beetl</artifactId>
                 <version>${beetl.version}</version>
             </dependency>
+
+            <!--JSON 转换工具-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

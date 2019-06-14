@@ -51,6 +51,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!--JSON 转换工具-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
         <!--添加servlet-api的依赖,用来打war包  -->
         <dependency>
             <groupId>javax.servlet</groupId>
