@@ -59,5 +59,7 @@ public class ResponseDto implements Serializable {
     public static ResponseDto failure(String message){
         return new ResponseDto(ResultCode.ERROR_BUSINESS.getCode(),message);
     }
-
+    public static ResponseDto failure(int code,String message){
+        return new ResponseDto(code,message);
+    }
 }
