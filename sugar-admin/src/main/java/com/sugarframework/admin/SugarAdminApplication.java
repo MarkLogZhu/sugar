@@ -1,13 +1,13 @@
-package com.sugarframework.sugar;
+package com.sugarframework.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SugarApplication {
+public class SugarAdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SugarApplication.class, args);
+        SpringApplication.run(SugarAdminApplication.class, args);
     }
 
 }
