@@ -38,6 +38,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- beetl 模板引擎-->
+        <dependency>
+            <groupId>com.ibeetl</groupId>
+            <artifactId>beetl</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

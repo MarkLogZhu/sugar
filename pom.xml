@@ -27,6 +27,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <sugar.version>0.0.1-SNAPSHOT</sugar.version>
+        <beetl.version>2.9.3</beetl.version>
     </properties>
 
     <dependencyManagement>
@@ -46,6 +47,14 @@
                 <version>2.1.5.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+
+            <!-- beetl 模板引擎-->
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetl</artifactId>
+                <version>${beetl.version}</version>
             </dependency>
 
         </dependencies>
