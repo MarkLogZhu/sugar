@@ -9,6 +9,7 @@ public enum ResultCode {
 
     SUCCESS(200, "成功"),
     FAIL(43003, "操作失败"),
+    ERROR_PARAMETER_VALIDATION(50000, "参数检验失败"),
     ERROR_NOT_LOGIN(50001, "用户未登录"),
     ACCOUNT_NOT_EXIST(50002, "账号不存在"),
     PASSWORD_WRONG(50003, "账号或密码错误"),
