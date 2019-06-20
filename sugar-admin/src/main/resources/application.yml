@@ -24,3 +24,18 @@ spring:
   # 关闭工程中的资源文件建立映射
   resources:
     add-mappings: false
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/sugar?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: sa000
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      # 数据库连接池的最小维持连接数
+      min-idle: 5
+      # 初始化提供的连接数
+      initial-size: 5
+      # 最大的连接数
+      max-total: 10
+      # 等待连接获取的最大超时时间
+      max-wait-millis: 10000

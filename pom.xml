@@ -29,6 +29,10 @@
         <sugar.version>0.0.1-SNAPSHOT</sugar.version>
         <beetl.version>2.9.3</beetl.version>
         <fastjson.version>1.2.58</fastjson.version>
+        <mysql.version>5.1.47</mysql.version>
+        <mybatis-plus.version>3.1.1</mybatis-plus.version>
+        <druid.version>1.1.17</druid.version>
+        <mybatis-plus.version>3.1.1</mybatis-plus.version>
     </properties>
 
     <dependencyManagement>
@@ -50,7 +54,6 @@
                 <scope>import</scope>
             </dependency>
 
-
             <!-- beetl 模板引擎-->
             <dependency>
                 <groupId>com.ibeetl</groupId>
@@ -58,13 +61,34 @@
                 <version>${beetl.version}</version>
             </dependency>
 
-            <!--JSON 转换工具-->
+            <!-- JSON 转换工具 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
 
+            <!-- mysql 数据库 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <scope>runtime</scope>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!--阿里数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
