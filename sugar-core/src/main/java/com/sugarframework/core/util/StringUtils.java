@@ -10,7 +10,7 @@ import java.util.Map;
   * @author zhu
   * @date 2019-06-14 13:21
   */
-public class StringUtils {
+public class StringUtils extends  org.apache.commons.lang3.StringUtils {
     /** 空字符串 */
     private static final String NULLSTR = "";
 
