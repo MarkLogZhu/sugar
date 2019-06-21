@@ -16,7 +16,9 @@ public enum ResultCode {
     ACCOUNT_STATUS_FREEZE(50004, "账号当前被冻结,请联系系统管理员处理"),
     ERROR_NO_HANDLER_FOUND(404, "接口不存在"),
     ERROR_UNKNOWN(60000, "未知的内部错误"),
-    ERROR_BUSINESS(60001, "通用业务错误");
+    ERROR_CACHE(60001, "缓存异常"),
+    ERROR_SEED(60002, "种子异常"),
+    ERROR_BUSINESS(61001, "通用业务错误");
 
     private int code;
     private String message;

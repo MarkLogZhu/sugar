@@ -4,6 +4,7 @@ import com.sugarframework.admin.module.common.validation.group.UserValidationGro
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
+import java.util.Date;
 
 /**
   * @description: 用户 Dto 对象
@@ -13,10 +14,18 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class UserDto {
 
+    private String userId;
     @NotEmpty(message = "账号不能为空" ,groups = {UserValidationGroup.class,UserValidationGroup.Login.class})
     private String account;
     @NotEmpty(message = "密码不能为空",groups ={UserValidationGroup.Login.class})
     private String password;
-
-
+    private String userName;
+    private Date birthday;
+    private String email;
+    private String phone;
+    private Integer status;
+    private String creator;
+    private Date createTime;
+    private String modifier;
+    private Date modifyTime;
 }
