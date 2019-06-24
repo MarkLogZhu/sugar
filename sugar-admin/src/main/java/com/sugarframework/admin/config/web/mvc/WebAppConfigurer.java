@@ -1,19 +1,27 @@
 package com.sugarframework.admin.config.web.mvc;
 
+import com.sugarframework.admin.module.common.interceptor.LoginInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
-  * @description: TODO
-  * @author zhu
-  * @date 2019-06-14 16:17
-  */
+ * @author zhu
+ * @description: TODO
+ * @date 2019-06-14 16:17
+ */
 @Configuration
-public class WebAppConfigurer  extends WebMvcConfigurationSupport{
+public class WebAppConfigurer extends WebMvcConfigurationSupport {
+
+    @Autowired
+    private LoginInterceptor loginInterceptor;
+
 
     /**
      * 配置静态资源访问
+     *
      * @param registry
      */
     @Override
@@ -26,4 +34,11 @@ public class WebAppConfigurer  extends WebMvcConfigurationSupport{
         super.addResourceHandlers(registry);
     }
 
+    @Override
+    protected void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(loginInterceptor)
+                .addPathPatterns("/*")
+                .excludePathPatterns("/login");
+        super.addInterceptors(registry);
+    }
 }
