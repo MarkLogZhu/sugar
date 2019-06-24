@@ -1,6 +1,6 @@
 package com.sugarframework.core.base.controller;
 
-import com.sugarframework.core.util.StringUtils;
+import com.sugarframework.core.util.web.ServletUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,28 +17,13 @@ public class BaseController {
 
 
     /**
-     * 是否是页面访问
+     * 是否是页面访问,判断条件为是否是 Ajax 请求
      *
      * @param request
      * @return
      */
     public boolean isAccessPage(HttpServletRequest request) {
-        String requestAccept = request.getHeader("accept");
-        String contentType = "text/html";
-        if (StringUtils.isNotEmpty(requestAccept)) {
-            if (StringUtils.contains(requestAccept, "application/json")
-                    || StringUtils.contains(requestAccept, "text/javascript")
-                    || StringUtils.contains(requestAccept, "text/json")) {
-                contentType = "application/json";
-            }
-        }
-        if (contentType.equals("text/html")) {
-            return true;
-        } else if (contentType.equals("application/json")) {
-            return false;
-        } else {
-            return false;
-        }
+        return !ServletUtils.isAjaxRequest(request);
     }
 
 }
