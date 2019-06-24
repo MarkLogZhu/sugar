@@ -27,7 +27,6 @@ function ajaxPost(url,params,success,failure) {
     $.ajax({
         url:url,
         type:"post",
-        headers:{"X-Requested-With":"XMLHttpRequest"},
         dataType:"json",
         data:params,
         success: function (result) {
