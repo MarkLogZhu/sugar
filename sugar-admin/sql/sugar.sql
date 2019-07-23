@@ -65,17 +65,17 @@ CREATE TABLE `sys_menu` (
 -- 初始化菜单表数据
 -- ----------------------------
 -- 一级菜单
-INSERT INTO sys_menu values('10001','系统管理','sys_management','0','1','#','M','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10002','系统监控','sys_monitor','0','2','#','M','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10003','系统工具','sys_tool','0','3','#','M','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10001','系统管理','sys_management','0','1','#','M','0','&#xe696;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10002','系统监控','sys_monitor','0','2','#','M','0','&#xe6da;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10003','系统工具','sys_tool','0','3','#','M','0','&#xe6ae;','admin',NOW(),'admin',NOW(),'0','');
 -- 二级菜单
-INSERT INTO sys_menu values('10101','用户管理','sys_management_user','10001','1','/sys/user/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10102','菜单管理','sys_management_menu','10001','2','/sys/menu/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10103','角色管理','sys_management_role','10001','3','/sys/role/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10104','字典管理','sys_management_dict','10001','4','/sys/dict/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10105','日志管理','sys_management_log','10001','5','/sys/log/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10201','数据库监控','sys_monitor_database','10002','1','/sys/monitor/database/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
-INSERT INTO sys_menu values('10301','接口文档','sys_tool_swagger','10003','1','/sys/monitor/database/managementPage','C','0','fa fa-gear','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10101','用户管理','sys_management_user','10001','1','/sys/user/managementPage','C','0','&#xe6b8;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10102','菜单管理','sys_management_menu','10001','2','/sys/menu/managementPage','C','0','&#xe6b5;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10103','角色管理','sys_management_role','10001','3','/sys/role/managementPage','C','0','&#xe6c7;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10104','字典管理','sys_management_dict','10001','4','/sys/dict/managementPage','C','0','&#xe705;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10105','日志管理','sys_management_log','10001','5','/sys/log/managementPage','C','0','&#xe74e;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10201','数据库监控','sys_monitor_database','10002','1','/sys/monitor/database/managementPage','C','0','&#xe6da;','admin',NOW(),'admin',NOW(),'0','');
+INSERT INTO sys_menu values('10301','接口文档','sys_tool_swagger','10003','1','/sys/monitor/database/managementPage','C','0','&#xe74e;','admin',NOW(),'admin',NOW(),'0','');
 -- 三级菜单
 -- 用户管理按钮
 INSERT INTO sys_menu values('11001','用户查询','sys_management_user_query','10101','1','#','F','0','#','admin',NOW(),'admin',NOW(),'0','');
