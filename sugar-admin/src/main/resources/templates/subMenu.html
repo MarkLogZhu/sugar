@@ -1,9 +1,9 @@
 <ul class="sub-menu">
-    <!-- 遍历子菜单树 -->
+    <!--遍历子菜单树-->
     <% for(childMenu in childMenus){
     <li>
         <!-- 先显示当前菜单 -->
-        <a href="${childMenu.url}">
+        <a onclick="xadmin.add_tab('${childMenu.menuName}','${ctxPath}${childMenu.url}')">
             <i class="iconfont left-nav-li" lay-tips="${childMenu.menuName}">${childMenu.icon}</i>
             <cite>${childMenu.menuName}</cite>
             <% if(childMenu.children != null && childMenu.children.~size > 0){

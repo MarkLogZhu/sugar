@@ -54,7 +54,11 @@
         <ul id="nav">
             <% for(menu in menus){
             <li>
-                <a href="${menu.url}">
+                <% if(menu.url != null && menu.url !='#'){
+                <a onclick="xadmin.add_tab('${menu.menuName}','${ctxPath}${menu.url}')">
+                <% } else {
+                    <a href="${menu.url}">
+                <% }
                     <i class="iconfont left-nav-li" lay-tips="${menu.menuName}">${menu.icon}</i>
                     <cite>${menu.menuName}</cite>
                     <% if(menu.children != null && menu.children.~size > 0){
