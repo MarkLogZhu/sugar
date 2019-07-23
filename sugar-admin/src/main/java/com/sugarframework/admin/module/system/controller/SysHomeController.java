@@ -1,7 +1,6 @@
 package com.sugarframework.admin.module.system.controller;
 
 import com.sugarframework.admin.module.common.holder.RequestContextHolder;
-import com.sugarframework.admin.module.common.model.MenuDto;
 import com.sugarframework.admin.module.common.model.UserDto;
 import com.sugarframework.admin.module.system.service.SysMenuManagementService;
 import com.sugarframework.core.base.controller.BaseController;
@@ -9,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.List;
 
 /**
  * @author zhu
