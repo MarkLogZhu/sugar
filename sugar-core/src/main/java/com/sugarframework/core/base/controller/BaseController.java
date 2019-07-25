@@ -1,5 +1,7 @@
 package com.sugarframework.core.base.controller;
 
+import com.sugarframework.core.base.page.PageFactory;
+import com.sugarframework.core.model.PageDto;
 import com.sugarframework.core.util.web.ServletUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,4 +28,11 @@ public class BaseController {
         return !ServletUtils.isAjaxRequest(request);
     }
 
+
+    /**
+     * 初始化分页
+     */
+    protected PageDto getPage() {
+        return PageFactory.buildPageRequest();
+    }
 }
