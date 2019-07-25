@@ -113,6 +113,19 @@ public class ExceptionHandlerController extends BaseController {
         }
     }
 
+
+    /**
+     * 处理运行时未知异常
+     *
+     * @param request
+     * @param exception
+     */
+    @ExceptionHandler(value = RuntimeException.class)
+    public ModelAndView handlerRuntimeException(HttpServletRequest request, HttpServletResponse response, RuntimeException exception) {
+        log.error("Exception --> url:" + request.getRequestURL().toString(), exception);
+        return handlerReturnResult(request, response, ResultCode.ERROR_UNKNOWN.getCode(), exception.toString());
+    }
+
     /**
      * 处理未知异常
      *
