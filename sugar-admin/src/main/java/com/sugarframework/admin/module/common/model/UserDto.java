@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 public class UserDto {
 
-    private String userId;
+    private Long userId;
     @NotEmpty(message = "账号不能为空" ,groups = {UserValidationGroup.class,UserValidationGroup.Login.class})
     private String account;
     @NotEmpty(message = "密码不能为空",groups ={UserValidationGroup.Login.class})
