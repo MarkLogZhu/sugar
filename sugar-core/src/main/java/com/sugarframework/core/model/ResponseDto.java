@@ -6,10 +6,10 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
-  * @description: 请求响应结果对象
-  * @author zhu
-  * @date 2019-06-14 13:51
-  */
+ * @author zhu
+ * @description: 请求响应结果对象
+ * @date 2019-06-14 13:51
+ */
 @Data
 public class ResponseDto implements Serializable {
 
@@ -20,21 +20,22 @@ public class ResponseDto implements Serializable {
     private Object data;
 
 
-    private ResponseDto(ResultCode resultCode) {
+    protected ResponseDto(ResultCode resultCode) {
         this.code = resultCode.getCode();
         this.message = resultCode.getMessage();
     }
 
-    private ResponseDto(ResultCode resultCode, Object data) {
+    protected ResponseDto(ResultCode resultCode, Object data) {
         this(resultCode);
         this.data = data;
     }
 
-    private ResponseDto(int code, String message) {
+    protected ResponseDto(int code, String message) {
         this.code = code;
         this.message = message;
     }
-    private ResponseDto(int code, String message, Object data) {
+
+    protected ResponseDto(int code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -52,14 +53,15 @@ public class ResponseDto implements Serializable {
         return new ResponseDto(ResultCode.SUCCESS.getCode(), message, data);
     }
 
-    public static ResponseDto failure(ResultCode resultCode){
+    public static ResponseDto failure(ResultCode resultCode) {
         return new ResponseDto(resultCode);
     }
 
-    public static ResponseDto failure(String message){
-        return new ResponseDto(ResultCode.ERROR_BUSINESS.getCode(),message);
+    public static ResponseDto failure(String message) {
+        return new ResponseDto(ResultCode.ERROR_BUSINESS.getCode(), message);
     }
-    public static ResponseDto failure(int code,String message){
-        return new ResponseDto(code,message);
+
+    public static ResponseDto failure(int code, String message) {
+        return new ResponseDto(code, message);
     }
 }
